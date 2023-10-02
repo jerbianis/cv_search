@@ -29,9 +29,9 @@
                     <th>Score</th>
                 </tr>
                 <?php
+
                 //convert pdf files to txt
-                $out = shell_exec("python pdf_to_txt.py 2>&1");
-                var_dump($out);
+                exec("python pdf_to_txt.py");
 
 
                 // Directory containing your TXT files
