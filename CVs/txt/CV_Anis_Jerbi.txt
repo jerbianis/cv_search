@@ -1,0 +1,106 @@
+Anis Jerbi
+anisjerbi2@gmail.com
++21627708453
+
+SKILLS
+_________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+Programming Languages: PHP / Python / Java / C / JavaScript Technologies: Laravel / Blade / Vue.js / Angular / React / Bootstrap / jQuery Databases: MySQL / PLSQL / SQLite Operating System: Linux
+
+WORK EXPERIENCE
+_________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+Full Stack Laravel Developer Voguel Consulting Company · Tunis, Tunisia
+
+May 2023 - Present
+
+· Developed and maintained web application interfaces for efficient data management and
+
+manipulation, utilizing Laravel's CRUD operations.
+
+· Implemented robust authorization and authentication systems for enhanced security.
+
+· Conducted quality control tests and resolved bugs promptly to ensure a seamless user experience.
+
+· Optimized website performance through database queries and code refactoring.
+
+· Achieved a top-ranking position on Google through SEO best practices.
+
+· Created UML diagrams for system visualization and documentation.
+
+Full Stack Laravel Developer
+
+Mar 2022 - Aug 2022
+
+Nachd-IT Company · Sousse, Tunisia
+
+· Spearheaded the development of a recruiting services platform using Laravel 9.
+
+· Implemented Jitsi video call integration to facilitate seamless virtual interviews and communication.
+
+IoT Developer
+
+Feb 2019 - Jun 2019
+
+Fab Lab · Mahdia
+
+· Designed and developed an intelligent and interactive Smart Home device.
+
+· Implemented facial recognition and voice recognition using Python and OpenCV on Raspberry Pi.
+
+EDUCATION
+_________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+Engineer's degree in Software Engineering EPI ­ Higher International and Private Institute of Engineers · Sousse
+Accredited ASIIN Euro-Inf Master Label
+
+2019 - 2022
+
+Bachelor's degree in Computer Science ISIMa ­ Higher Institute of Computer Science · Mahdia, Tunisia
+Baccalaureate degree in Computer Science Secondary School Ibn Rochd · Chebba, Tunisia
+
+2016 - 2019 2015
+
+TRAINING AND CERTIFICATIONS
+_________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+Business Design Thinking & Business Model Canvas Training
+
+2019
+
+Training using Vianeo tool for incubation & innovation management process in the context of
+
+the first regional competition in digital entrepreneurship Mahdia Digital BY The Career and Skills
+
+Certification Center 4C.
+
+MTA Database Administration Fundamentals Certification Verify.certiport.com wUhAb-FMXL
+
+2018
+
+Practical Workshops for Entrepreneurial Initiative
+
+2018
+
+Practical training in entrepreneurship organized by the business incubator Mahdia Entreprendre
+
+and The Agency for the Promotion of Industry and Innovation.
+
+VOLUNTEER WORK
+_________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+Member and Trainer Club D'image · Chebba
+Photography Club
+
+Dec 2017 - Present
+
+Treasurer JCI · Chebba
+Member The Development for Students of Chebba Association · Chebba, Tunisia
+Civil Rights and Social Actions
+
+Dec 2020 - Dec 2021 2011 - 2014
+
+LANGUAGES
+_________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+Arabic: Native English: TOEIC 670 French: Intermediate
+
+
