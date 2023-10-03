@@ -6,7 +6,7 @@ import os
 
 def extract_text_from_pdf(pdf_path):
     #use this command to know the path (which pdftotext)
-    text = textract.parsers.process(pdf_path,input_encoding='Latin-1',method='pdftotext',path='/mingw64/bin/pdftotext')
+    text = textract.parsers.process(pdf_path,input_encoding='Latin-1')
     return text
 
 pdf_folder = './CVs'
