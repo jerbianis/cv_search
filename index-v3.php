@@ -226,6 +226,7 @@
             </table>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
     <script>
         // Select elements
@@ -240,11 +241,6 @@
             document.getElementById('selected-options2'),
             document.getElementById('selected-options3')
         ];
-
-        // Add event listeners and functions for each select element
-        selects.forEach((select, index) => {
-            select.addEventListener('change', () => updateSelectedOptions(index));
-        });
 
         function updateSelectedOptions(index) {
             const selectedOptionsDiv = selectedOptionsDivs[index];
@@ -274,6 +270,19 @@
                 updateSelectedOptions(index);
             }
         }
+    </script>
+    <script>
+        $('option').mousedown(function(e) {
+            e.preventDefault();
+            $(this).prop('selected', !$(this).prop('selected'));
+            var selectElement = $(this).parent('select');
+            switch (selectElement.attr('id')) {
+                case 'skills': updateSelectedOptions(0);break;
+                case 'family': updateSelectedOptions(1);break;
+                case 'education': updateSelectedOptions(2);break;
+            }
+            return false;
+        });
     </script>
 </body>
 </html>
