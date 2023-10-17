@@ -95,7 +95,7 @@
                         <select id="skills" class="form-control" name="options[]" multiple>
                             <?php
                                 foreach ($skills_options as $value => $text){
-                                    $selected = ($_SERVER["REQUEST_METHOD"] == "POST" && in_array($value, $_POST["options"])) ? "selected" : "";
+                                    $selected = (isset($_POST["options"]) && in_array($value, $_POST["options"])) ? "selected" : "";
                                     echo "<option value='$value' $selected>$text</option>";
                                 }
                             ?>
@@ -106,7 +106,7 @@
                         <select id="family" class="form-control" name="options[]" multiple>
                             <?php
                             foreach ($family_options as $value => $text){
-                                $selected = ($_SERVER["REQUEST_METHOD"] == "POST" && in_array($value, $_POST["options"])) ? "selected" : "";
+                                $selected = (isset($_POST["options"]) && in_array($value, $_POST["options"])) ? "selected" : "";
                                 echo "<option value='$value' $selected>$text</option>";
                             }
                             ?>
@@ -117,7 +117,7 @@
                         <select id="education" class="form-control" name="options[]" multiple>
                             <?php
                             foreach ($education_options as $value => $text){
-                                $selected = ($_SERVER["REQUEST_METHOD"] == "POST" && in_array($value, $_POST["options"])) ? "selected" : "";
+                                $selected = (isset($_POST["options"]) && in_array($value, $_POST["options"])) ? "selected" : "";
                                 echo "<option value='$value' $selected>$text</option>";
                             }
                             ?>
@@ -163,7 +163,7 @@
                 // Get a list of TXT files in the directory
                 $txtFiles = glob($txtDirectory . '*.txt');
 
-                if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                if (($_SERVER["REQUEST_METHOD"] == "POST") and (isset($_POST["keywords"]) or isset($_POST["options"])) ) {
                     $keywords = $_POST["keywords"];
                     $keywords = explode(" ", $keywords);
                     $options = $_POST["options"];
@@ -174,23 +174,27 @@
                         $output = file_get_contents($filename);
                         $count = 0;
                         $words_found = '';
-                        foreach ($options as $option) {
-                            if ($key_options = explode(" ", $option)){
-                                foreach ($key_options as $key_option) {
-                                    if (stripos($output, $key_option) !== false) {
-                                        $count++;
-                                        $words_found .= $key_option.' ';
+                        if (isset($options)){
+                            foreach ($options as $option) {
+                                if ($key_options = explode(" ", $option)){
+                                    foreach ($key_options as $key_option) {
+                                        if (stripos($output, $key_option) !== false) {
+                                            $count++;
+                                            $words_found .= $key_option.' ';
+                                        }
                                     }
+                                }elseif (stripos($output, $option) !== false) {
+                                    $count++;
+                                    $words_found .= $option.' ';
                                 }
-                            }elseif (stripos($output, $option) !== false) {
-                                $count++;
-                                $words_found .= $option.' ';
                             }
                         }
-                        foreach ($keywords as $keyword) {
-                            if ($keyword !== "" && stripos($output, $keyword) !== false) {
-                                $count++;
-                                $words_found .= $keyword.' ';
+                        if (isset($keywords)){
+                            foreach ($keywords as $keyword) {
+                                if ($keyword !== "" && stripos($output, $keyword) !== false) {
+                                    $count++;
+                                    $words_found .= $keyword.' ';
+                                }
                             }
                         }
 
@@ -282,6 +286,13 @@
                 case 'education': updateSelectedOptions(2);break;
             }
             return false;
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            updateSelectedOptions(0);
+            updateSelectedOptions(1);
+            updateSelectedOptions(2);
         });
     </script>
 </body>
