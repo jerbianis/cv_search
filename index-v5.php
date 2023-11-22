@@ -143,7 +143,8 @@
                         </div>
                     </div>
                 </div>
-                <div>
+                <div class="mt-3">
+                    <h3>Recherche en cours</h3>
                     <div id="selected-options3" class="selected-options">
                         <!-- Selected options will be displayed here -->
                     </div>
@@ -154,19 +155,19 @@
                         <!-- Selected options will be displayed here -->
                     </div>
                 </div>
-                <div class="col-md-2 mt-1">
+                <div class="col-md-2 mt-2">
                     <input class="btn btn-primary" style="background-color: #50b9e0; border-color: #50b9e0;" type="submit" value="Rechercher">
                 </div>
             </form>
         </div>
 
-        <div class="mt-2 border">
+        <div class="mt-3 border">
             <h3>Résultat de recherche</h3>
             <table class="table table-responsive table-hover mb-0">
                 <tr>
                     <th> </th>
                     <th>Curriculum Vitae</th>
-                    <th>Elements associés</th>
+                    <th>Éléments associés</th>
                     <th>Score</th>
                 </tr>
                 <?php
@@ -198,12 +199,12 @@
                                     foreach ($key_options as $key_option) {
                                         if (stripos($output, $key_option) !== false) {
                                             $count++;
-                                            $words_found .= $key_option.' ';
+                                            $words_found .= ucfirst($key_option).', ';
                                         }
                                     }
                                 }elseif (stripos($output, $option) !== false) {
                                     $count++;
-                                    $words_found .= $option.' ';
+                                    $words_found .= ucfirst($option).', ';
                                 }
                             }
                         }
@@ -211,7 +212,7 @@
                             foreach ($keywords as $keyword) {
                                 if ($keyword !== "" && stripos($output, $keyword) !== false) {
                                     $count++;
-                                    $words_found .= $keyword.' ';
+                                    $words_found .= ucfirst($keyword).', ';
                                 }
                             }
                         }
@@ -237,7 +238,7 @@
                         <tr>
                             <td><?php echo $rank ?></td>
                             <td><a style="color: #449fbf" target="_blank" href="<?php echo $pdf_file_path ?>"><?php echo pathinfo($filename,PATHINFO_FILENAME) ?></a></td>
-                            <td><?php echo $words[$filename] ?></td>
+                            <td><?php echo substr($words[$filename],0,-2).'.' ?></td>
                             <td><?php echo $count ?></td>
                         </tr>
                         <?php
